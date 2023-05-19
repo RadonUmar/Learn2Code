@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Get started with algorithms</title>
+  <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+  <link href="https://getbootstrap.com/docs/5.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+  <link href="https://getbootstrap.com/docs/5.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+  <link href="https://getbootstrap.com/docs/5.2/examples/heroes/heroes.css" rel="stylesheet">
+<link href="https://getbootstrap.com/docs/5.3/dist/css/bootstrap.rtl.min.css" rel="stylesheet">
+
+<style>
+.language-CSS {
+    -webkit-text-size-adjust: 100%;
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+    --ghost-accent-color: #15171A;
+    letter-spacing: 0;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    box-sizing: inherit;
+    border: 0;
+    font: inherit;
+    font-family: Monaco,Menlo,Ubuntu Mono,Droid Sans Mono,Consolas,monospace;
+    margin: 0 .0625rem;
+    border-radius: 2px;
+    white-space: pre;
+    vertical-align: baseline;
+    padding: 0;
+    font-size: inherit;
+    line-height: inherit;
+    background: transparent;
+    color: #64edbf;
+}
+</style>
+
+</head>
+<body>
+
+<header class="p-3 bg-dark text-white">
+    <div class="container">
+      <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+        <a href="/" class="d-flex align-items-center mb-2 mb-lg-0 text-white text-decoration-none">
+          <svg class="bi me-2" width="40" height="32" role="img" aria-label="Bootstrap"><use xlink:href="#bootstrap"></use></svg>
+        </a>
+
+        <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
+          <li><a href=../ class="nav-link px-2 text-secondary">Home</a></li>
+          <li><a href="#" class="nav-link px-2 text-white">Features</a></li>
+          <li><a href="#" class="nav-link px-2 text-white">Pricing</a></li>
+          <li><a href="#" class="nav-link px-2 text-white">FAQs</a></li>
+          <li><a href="#" class="nav-link px-2 text-white">About</a></li>
+        </ul>
+
+        <form class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3" role="search">
+          <input type="search" class="form-control form-control-dark text-white bg-dark" placeholder="Search..." aria-label="Search">
+        </form>
+
+        <div class="text-end">
+          <button type="button" class="btn btn-outline-light me-2">Login</button>
+          <button type="button" class="btn btn-warning">Sign-up</button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  
+  
+ <div class="b-example-divider"></div>
+
+  <div class="bg-dark text-secondary px-4 py-5 ">
+    <div class="py-5">
+      
+      <article class="blog-post">
+        
+        <h2 class="blog-post-title mb-1">Next Round words</h2>
+        <p class="blog-post-meta">May 7, 2021 by <a href="#">Umar</a></p>
+
+        <p>taking array inputs, and running through their elements to check if they have the required properties</p>
+        <hr>
+
+        <p><ul>
+    <li><strong>Time limit:</strong> 3 seconds</li>
+    <li><strong>Memory limit:</strong> 256 MB</li>
+</ul>
+<div>
+    <p>"Contestant who earns a score equal to or greater than the k-th place finisher's score will advance to the next round, as long as the contestant earns a positive score..." — an excerpt from contest rules.</p>
+    <p>A total of n participants took part in the contest (n ≥ k), and you already know their scores. Calculate how many participants will advance to the next round.</p>
+   
+</div>
+<div>
+    <div><b>Input</b></div>
+    <p>The first line of the input contains two integers n and k (1 ≤ k ≤ n ≤ 50) separated by a single space.</p>
+<p>The second line contains n space-separated integers a1, a2, ..., an (0 ≤ ai ≤ 100), where ai is the score earned by the participant who got the i-th place. The given sequence is non-increasing (that is, for all i from 1 to n - 1 the following condition is fulfilled: ai ≥ ai + 1).</p>
+</div>
+<div>
+    <div><b>Output</b></div>
+    <p>Output the number of participants who advance to the next round.</p>
+</div>
+        <h2>Solution</h2>
+        <p>The first step is to take the input array which we can do using a for loop which runs n times. Then in another for loop, we check if each element contains these properties: </p>
+<p>-  is not negative (greater than 0)<br>-   is greater than the number 'k'</p>
+<p>Each time any element satisfies these properties we increase the counter by 1. We finally print the count (ans)</p>
+<blockquote class="blockquote">
+          <p>Code to this problem</p>
+        </blockquote>
+<pre><code class="language-CSS"> #include &lt;bits/stdc++.h&gt;
+ using namespace std; 
+ #define ll long long
+ int a[1000];
+
+ int main(){
+    int n,k,ans=0;
+    cin >> n >> k;
+    for(int i=1;i<=n;++i){
+      cin >> a[i];
+    }
+    for(int j=1;j<=n;++j){
+      if(a[j]>0 && a[j]>=a[k]){
+        ++ans;
+      }
+    }
+    cout << ans;
+  }</code></pre>
+
+  
+
+      <div class="col-lg-6 mx-auto">
+        
+        <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
+</div>
+          
+          
+        </div>
+      </div>
+    </div>
+  </div>
+
+<footer class="py-3 my-4 bg-dark">
+    <ul class="nav justify-content-center border-bottom pb-3 mb-3">
+      <li class="nav-item"><a href=".." class="nav-link px-2 text-light">Home</a></li>
+      <li class="nav-item"><a href="#" class="nav-link px-2 text-light">FAQs</a></li>
+      <li class="nav-item"><a href="#" class="nav-link px-2 text-light">About</a></li>
+      <li class="nav-item"><a href="#" class="nav-link px-2 text-light">Github<img src="https://github.githubassets.com/favicons/favicon.png" alt="Girl in a jacket" width="30" height="30"></a></li>
+    </ul>
+    <p class="text-center text-light">© 2022 RadonU</p>
+  </footer>
+
+  <script src="https://getbootstrap.com/docs/5.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+  
+</body>
+</html>

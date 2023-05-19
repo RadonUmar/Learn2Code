@@ -1,0 +1,164 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>Get started with algorithms</title>
+  <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+  <link href="https://getbootstrap.com/docs/5.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+  <link href="https://getbootstrap.com/docs/5.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+  <link href="https://getbootstrap.com/docs/5.2/examples/heroes/heroes.css" rel="stylesheet">
+<link href="https://getbootstrap.com/docs/5.3/dist/css/bootstrap.rtl.min.css" rel="stylesheet">
+
+<style>
+.language-CSS {
+    -webkit-text-size-adjust: 100%;
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+    --ghost-accent-color: #15171A;
+    letter-spacing: 0;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    box-sizing: inherit;
+    border: 0;
+    font: inherit;
+    font-family: Monaco,Menlo,Ubuntu Mono,Droid Sans Mono,Consolas,monospace;
+    margin: 0 .0625rem;
+    border-radius: 2px;
+    white-space: pre;
+    vertical-align: baseline;
+    padding: 0;
+    font-size: inherit;
+    line-height: inherit;
+    background: transparent;
+    color: #64edbf;
+}
+</style>
+
+</head>
+<body>
+
+<header class="p-3 bg-dark text-white">
+    <div class="container">
+      <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+        <a href="/" class="d-flex align-items-center mb-2 mb-lg-0 text-white text-decoration-none">
+          <svg class="bi me-2" width="40" height="32" role="img" aria-label="Bootstrap"><use xlink:href="#bootstrap"></use></svg>
+        </a>
+
+        <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
+          <li><a href=../ class="nav-link px-2 text-secondary">Home</a></li>
+          <li><a href="#" class="nav-link px-2 text-white">Features</a></li>
+          <li><a href="#" class="nav-link px-2 text-white">Pricing</a></li>
+          <li><a href="#" class="nav-link px-2 text-white">FAQs</a></li>
+          <li><a href="#" class="nav-link px-2 text-white">About</a></li>
+        </ul>
+
+        <form class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3" role="search">
+          <input type="search" class="form-control form-control-dark text-white bg-dark" placeholder="Search..." aria-label="Search">
+        </form>
+
+        <div class="text-end">
+          <button type="button" class="btn btn-outline-light me-2">Login</button>
+          <button type="button" class="btn btn-warning">Sign-up</button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  
+  
+ <div class="b-example-divider"></div>
+
+  <div class="bg-dark text-secondary px-4 py-5 ">
+    <div class="py-5">
+      
+      <article class="blog-post">
+        
+        <h2 class="blog-post-title mb-1">Bit++</h2>
+        <p class="blog-post-meta">May 13, 2021 by <a href="#">Umar</a></p>
+
+        <p>Manipulating strings and implementation</p>
+        <hr>
+
+        <p><ul>
+    <li><strong>Time limit:</strong> 1.00 s</li>
+    <li><strong>Memory limit:</strong> 256 MB</li>
+</ul>
+<div>
+    <p>The classic programming language of Bitland is Bit++. This language is so peculiar and complicated.</p>
+    <p>The language is that peculiar as it has exactly one variable, called x. Also, there are two operations:
+<ul>
+<li>Operation ++ increases the value of variable x by 1.</li>
+<li>Operation -- decreases the value of variable x by 1.</li>
+</ul>
+</p>
+    <p>A statement in language Bit++ is a sequence, consisting of exactly one operation and one variable x. The statement is written without spaces, that is, it can only contain characters "+", "-", "X". Executing a statement means applying the operation it contains.</p>
+    <p>A programme in Bit++ is a sequence of statements, each of them needs to be executed. Executing a programme means executing all the statements it contains.</p>
+    <p>
+You're given a programme in language Bit++. The initial value of x is 0. Execute the programme and find its final value (the value of the variable when this programme is executed).
+
+</p>
+</div>
+<div>
+    <div><b>Input</b></div>
+    <p>The first line contains a single integer n (1 ≤ n ≤ 150) — the number of statements in the programme.<br>
+<br>
+Next n lines contain a statement each. Each statement contains exactly one operation (++ or --) and exactly one variable x (denoted as letter «X»). Thus, there are no empty statements. The operation and the variable can be written in any order.</p>
+</div>
+<div>
+    <div><b>Output</b></div>
+    <p>Print a single integer — the final value of x.</p>
+</div>
+        <h2>Solution</h2>
+        <p>We know that the string can be of maximum length 3. If we observe carefully we can see that the middle character that is s[1] will either be '+' or '-' and this can help us determine which operation to use. We take each input as string and check the middle character - if it is a '+' we must decrease the counter by 1 (decrement) else if it is a '-' we must increase it by 1 (increment).</p>
+<blockquote class="blockquote">
+          <p>Code to this problem</p>
+        </blockquote>
+<pre><code class="language-CSS"> #include <bits/stdc++.h>
+ using namespace std; 
+int a[100000];
+
+ int main(){
+     int n,ans=0;
+     cin >> n;
+     for(int i=0;i&lt;n;++i){
+       string s;
+       cin &gt;&gt; s;
+       if(s[1] == '+'){
+         ++ans;
+       }
+       else{
+         --ans;
+       }
+     }
+     cout << ans;
+  }
+ </code></pre>
+
+  
+
+      <div class="col-lg-6 mx-auto">
+        
+        <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
+</div>
+          
+          
+        </div>
+      </div>
+    </div>
+  </div>
+
+<footer class="py-3 my-4 bg-dark">
+    <ul class="nav justify-content-center border-bottom pb-3 mb-3">
+      <li class="nav-item"><a href=".." class="nav-link px-2 text-light">Home</a></li>
+      <li class="nav-item"><a href="#" class="nav-link px-2 text-light">FAQs</a></li>
+      <li class="nav-item"><a href="#" class="nav-link px-2 text-light">About</a></li>
+      <li class="nav-item"><a href="#" class="nav-link px-2 text-light">Github<img src="https://github.githubassets.com/favicons/favicon.png" alt="Girl in a jacket" width="30" height="30"></a></li>
+    </ul>
+    <p class="text-center text-light">© 2022 RadonU</p>
+  </footer>
+
+  <script src="https://getbootstrap.com/docs/5.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+  
+</body>
+</html>

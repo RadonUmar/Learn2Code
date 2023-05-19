@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Get started with algorithms</title>
+  <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+  <link href="https://getbootstrap.com/docs/5.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+  <link href="https://getbootstrap.com/docs/5.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+<link href="https://getbootstrap.com/docs/5.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+  <link href="https://getbootstrap.com/docs/5.2/examples/heroes/heroes.css" rel="stylesheet">
+<link href="https://getbootstrap.com/docs/5.3/dist/css/bootstrap.rtl.min.css" rel="stylesheet">
+
+<style>
+.language-CSS {
+    -webkit-text-size-adjust: 100%;
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+    --ghost-accent-color: #15171A;
+    letter-spacing: 0;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    box-sizing: inherit;
+    border: 0;
+    font: inherit;
+    font-family: Monaco,Menlo,Ubuntu Mono,Droid Sans Mono,Consolas,monospace;
+    margin: 0 .0625rem;
+    border-radius: 2px;
+    white-space: pre;
+    vertical-align: baseline;
+    padding: 0;
+    font-size: inherit;
+    line-height: inherit;
+    background: transparent;
+    color: #64edbf;
+}
+</style>
+
+</head>
+<body>
+
+<header class="p-3 bg-dark text-white">
+    <div class="container">
+      <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+        <a href="/" class="d-flex align-items-center mb-2 mb-lg-0 text-white text-decoration-none">
+          <svg class="bi me-2" width="40" height="32" role="img" aria-label="Bootstrap"><use xlink:href="#bootstrap"></use></svg>
+        </a>
+
+        <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
+          <li><a href=../ class="nav-link px-2 text-secondary">Home</a></li>
+          <li><a href="#" class="nav-link px-2 text-white">Features</a></li>
+          <li><a href="#" class="nav-link px-2 text-white">Pricing</a></li>
+          <li><a href="#" class="nav-link px-2 text-white">FAQs</a></li>
+          <li><a href="#" class="nav-link px-2 text-white">About</a></li>
+        </ul>
+
+        <form class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3" role="search">
+          <input type="search" class="form-control form-control-dark text-white bg-dark" placeholder="Search..." aria-label="Search">
+        </form>
+
+        <div class="text-end">
+          <button type="button" class="btn btn-outline-light me-2">Login</button>
+          <button type="button" class="btn btn-warning">Sign-up</button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  
+  
+ <div class="b-example-divider"></div>
+
+  <div class="bg-dark text-secondary px-4 py-5 ">
+    <div class="py-5">
+      
+      <article class="blog-post">
+        
+        <h2 class="blog-post-title mb-1">Weird Algorithm</h2>
+        <p class="blog-post-meta">May 2, 2022 by <a href="#">Umar</a></p>
+
+        <p>This is solved using basic mathematical operations and also uses the loops concept.</p>
+        <hr>
+
+        <p><ul>
+    <li><strong>Time limit:</strong> 1.00 s</li>
+    <li><strong>Memory limit:</strong> 512 MB</li>
+</ul>
+<p>Consider an algorithm that takes as input a positive integer n. If n is even, the algorithm divides it by two, and if n is odd, the algorithm multiplies it by three and adds one. The algorithm repeats this, until n is one. For example, the sequence for n=3 is as follows:
+</p>
+<p>3→10→5→16→8→4→2→1</p>
+<p><strong>Input</strong></p>
+<p>The only input line contains an integer n.</p>
+<p><strong>Output</strong></p>
+<p>Print a line that contains all values of n during the algorithm.</p>
+<p><strong>Constraints</strong></p>
+<ul>
+    <li><math xmlns="http://www.w3.org/1998/Math/MathML">
+  <mn>1</mn>
+  <mo>&#x2264;<!-- ≤ --></mo>
+  <mi>n</mi>
+  <mo>&#x2264;<!-- ≤ --></mo>
+  <msup>
+    <mn>10</mn>
+    <mn>6</mn>
+  </msup>
+</math></li>
+</ul>
+<p><strong>Example</strong></p>
+<p>Input:</p>
+<p><code>3</code></p>
+<p>Output:</p>
+<p><code>3 10 5 16 8 4 2 1</code></p></p>
+
+        <h2>Solution</h2>
+        <p>The solution to this problem is using a while loop, and the condition to break the loop will be when the number is 1. The loop will not overflow as it is guarenteed that there will always be a possible solution. In the for loop, we can use conditional statements to check whether the number is odd or even and accordingly choose what operator to use.</p>
+<blockquote class="blockquote">
+          <p>Code to this problem</p>
+        </blockquote>
+<pre><code class="language-CSS">#include &lt;iostream&gt;
+using namespace std;
+
+int main() {
+  long long n; //long long is used instead of int to satisfy the constraints
+  cin >> n;
+  cout << n << " ";
+  //using a while loop since we do not know when to break the loop
+  while(n != 1){
+    //if n is 1 then we end the loop
+    if(n == 1){
+      break;
+    }
+    //if n is even we divide by 2
+    if(n % 2 == 0){
+      n /= 2;
+    }
+    //otherwise n is odd so we multiply by 3 and add 1
+    else{
+      n *= 3;
+      n += 1;
+    }
+    //printing n after every operation
+    cout << n << " ";
+  }
+}</code></pre>
+
+  
+
+      <div class="col-lg-6 mx-auto">
+        
+        <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
+</div>
+          
+          
+        </div>
+      </div>
+    </div>
+  </div>
+
+<footer class="py-3 my-4 bg-dark">
+    <ul class="nav justify-content-center border-bottom pb-3 mb-3">
+      <li class="nav-item"><a href=".." class="nav-link px-2 text-light">Home</a></li>
+      <li class="nav-item"><a href="#" class="nav-link px-2 text-light">FAQs</a></li>
+      <li class="nav-item"><a href="#" class="nav-link px-2 text-light">About</a></li>
+      <li class="nav-item"><a href="#" class="nav-link px-2 text-light">Github<img src="https://github.githubassets.com/favicons/favicon.png" alt="Girl in a jacket" width="30" height="30"></a></li>
+    </ul>
+    <p class="text-center text-light">© 2022 RadonU</p>
+  </footer>
+
+  <script src="https://getbootstrap.com/docs/5.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+  
+</body>
+</html>

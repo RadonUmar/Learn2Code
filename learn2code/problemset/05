@@ -1,0 +1,147 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>Get started with algorithms</title>
+  <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+  <link href="https://getbootstrap.com/docs/5.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+  <link href="https://getbootstrap.com/docs/5.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+  <link href="https://getbootstrap.com/docs/5.2/examples/heroes/heroes.css" rel="stylesheet">
+<link href="https://getbootstrap.com/docs/5.3/dist/css/bootstrap.rtl.min.css" rel="stylesheet">
+
+<style>
+.language-CSS {
+    -webkit-text-size-adjust: 100%;
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+    --ghost-accent-color: #15171A;
+    letter-spacing: 0;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    box-sizing: inherit;
+    border: 0;
+    font: inherit;
+    font-family: Monaco,Menlo,Ubuntu Mono,Droid Sans Mono,Consolas,monospace;
+    margin: 0 .0625rem;
+    border-radius: 2px;
+    white-space: pre;
+    vertical-align: baseline;
+    padding: 0;
+    font-size: inherit;
+    line-height: inherit;
+    background: transparent;
+    color: #64edbf;
+}
+</style>
+
+</head>
+<body>
+
+<header class="p-3 bg-dark text-white">
+    <div class="container">
+      <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+        <a href="/" class="d-flex align-items-center mb-2 mb-lg-0 text-white text-decoration-none">
+          <svg class="bi me-2" width="40" height="32" role="img" aria-label="Bootstrap"><use xlink:href="#bootstrap"></use></svg>
+        </a>
+
+        <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
+          <li><a href=../ class="nav-link px-2 text-secondary">Home</a></li>
+          <li><a href="#" class="nav-link px-2 text-white">Features</a></li>
+          <li><a href="#" class="nav-link px-2 text-white">Pricing</a></li>
+          <li><a href="#" class="nav-link px-2 text-white">FAQs</a></li>
+          <li><a href="#" class="nav-link px-2 text-white">About</a></li>
+        </ul>
+
+        <form class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3" role="search">
+          <input type="search" class="form-control form-control-dark text-white bg-dark" placeholder="Search..." aria-label="Search">
+        </form>
+
+        <div class="text-end">
+          <button type="button" class="btn btn-outline-light me-2">Login</button>
+          <button type="button" class="btn btn-warning">Sign-up</button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  
+  
+ <div class="b-example-divider"></div>
+
+  <div class="bg-dark text-secondary px-4 py-5 ">
+    <div class="py-5">
+      
+      <article class="blog-post">
+        
+        <h2 class="blog-post-title mb-1">Bear and Big Brother</h2>
+        <p class="blog-post-meta">May 8, 2021 by <a href="#">Umar</a></p>
+
+        <p>Implementation of a while loop while performing some operations</p>
+        <hr>
+
+        <p><ul>
+    <li><strong>Time limit:</strong> 1.00 s</li>
+    <li><strong>Memory limit:</strong> 256 MB</li>
+</ul>
+<div>
+    <p>Bear Limak wants to become the largest of bears, or at least to become larger than his brother Bob.</p>
+    <p>Right now, Limak and Bob weigh a and b respectively. It's guaranteed that Limak's weight is smaller than or equal to his brother's weight</p>
+    <p>Limak eats a lot and his weight is tripled after every year, while Bob's weight is doubled after every year.</p>
+    <p>After how many full years will Limak become strictly larger (strictly heavier) than Bob?</p>
+</div>
+<div>
+    <div><b>Input</b></div>
+    <p>The only line of the input contains two integers a and b (1 ≤ a ≤ b ≤ 10) — the weight of Limak and the weight of Bob respectively.</p>
+</div>
+<div>
+    <div><b>Output</b></div>
+    <p>Print one integer, denoting the integer number of years after which Limak will become strictly larger than Bob.</p>
+</div>
+        <h2>Solution</h2>
+        <p>First, we take the input a and b. Then we create a while loop with the condition that a is less than or equal to b. When a is greater than b, the loop breaks and Limak's weight will be greater than Bob. Inside the loop, we multiply a by 3 (as it triples every year) and multiply b by 2 (as it doubles every year).</p>
+<p>There is a counter (ans) which increments (increases by 1) everytimes the loop occurs. This way we can count the number of years.</p>
+<blockquote class="blockquote">
+          <p>Code to this problem</p>
+        </blockquote>
+<pre><code class="language-CSS"> #include <bits/stdc++.h>
+ using namespace std; 
+
+ int main(){
+     int a,b,ans=0;
+     cin >> a >> b;
+     while(a<=b){
+          a *= 3; 
+          b *= 2;
+          ++ans;
+     }
+     cout << ans;
+  }</code></pre>
+
+  
+
+      <div class="col-lg-6 mx-auto">
+        
+        <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
+</div>
+          
+          
+        </div>
+      </div>
+    </div>
+  </div>
+
+<footer class="py-3 my-4 bg-dark">
+    <ul class="nav justify-content-center border-bottom pb-3 mb-3">
+      <li class="nav-item"><a href=".." class="nav-link px-2 text-light">Home</a></li>
+      <li class="nav-item"><a href="#" class="nav-link px-2 text-light">FAQs</a></li>
+      <li class="nav-item"><a href="#" class="nav-link px-2 text-light">About</a></li>
+      <li class="nav-item"><a href="#" class="nav-link px-2 text-light">Github<img src="https://github.githubassets.com/favicons/favicon.png" alt="Girl in a jacket" width="30" height="30"></a></li>
+    </ul>
+    <p class="text-center text-light">© 2022 RadonU</p>
+  </footer>
+
+  <script src="https://getbootstrap.com/docs/5.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+  
+</body>
+</html>

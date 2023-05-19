@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Get started with algorithms</title>
+  <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+  <link href="https://getbootstrap.com/docs/5.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+  <link href="https://getbootstrap.com/docs/5.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+  <link href="https://getbootstrap.com/docs/5.2/examples/heroes/heroes.css" rel="stylesheet">
+<link href="https://getbootstrap.com/docs/5.3/dist/css/bootstrap.rtl.min.css" rel="stylesheet">
+
+<style>
+.language-CSS {
+    -webkit-text-size-adjust: 100%;
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+    --ghost-accent-color: #15171A;
+    letter-spacing: 0;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    box-sizing: inherit;
+    border: 0;
+    font: inherit;
+    font-family: Monaco,Menlo,Ubuntu Mono,Droid Sans Mono,Consolas,monospace;
+    margin: 0 .0625rem;
+    border-radius: 2px;
+    white-space: pre;
+    vertical-align: baseline;
+    padding: 0;
+    font-size: inherit;
+    line-height: inherit;
+    background: transparent;
+    color: #64edbf;
+}
+</style>
+
+</head>
+<body>
+
+<header class="p-3 bg-dark text-white">
+    <div class="container">
+      <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+        <a href="/" class="d-flex align-items-center mb-2 mb-lg-0 text-white text-decoration-none">
+          <svg class="bi me-2" width="40" height="32" role="img" aria-label="Bootstrap"><use xlink:href="#bootstrap"></use></svg>
+        </a>
+
+        <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
+          <li><a href=../ class="nav-link px-2 text-secondary">Home</a></li>
+          <li><a href="#" class="nav-link px-2 text-white">Features</a></li>
+          <li><a href="#" class="nav-link px-2 text-white">Pricing</a></li>
+          <li><a href="#" class="nav-link px-2 text-white">FAQs</a></li>
+          <li><a href="#" class="nav-link px-2 text-white">About</a></li>
+        </ul>
+
+        <form class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3" role="search">
+          <input type="search" class="form-control form-control-dark text-white bg-dark" placeholder="Search..." aria-label="Search">
+        </form>
+
+        <div class="text-end">
+          <button type="button" class="btn btn-outline-light me-2">Login</button>
+          <button type="button" class="btn btn-warning">Sign-up</button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  
+  
+ <div class="b-example-divider"></div>
+
+  <div class="bg-dark text-secondary px-4 py-5 ">
+    <div class="py-5">
+      
+      <article class="blog-post">
+        
+        <h2 class="blog-post-title mb-1">Missing number</h2>
+        <p class="blog-post-meta">March 2, 2022 by <a href="#">Umar</a></p>
+
+        <p>This question uses some basic number theory and for loop concepts.</p>
+        <hr>
+
+        <div class="content">
+
+
+<title>CSES - Missing Number</title><script type="text/x-mathjax-config;executed=true">
+MathJax.Hub.Config({
+  tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]},
+  "HTML-CSS": {
+    scale: 90,
+    preferredFont: "TeX",
+    availableFonts: ["TeX"],
+  },
+  MathMenu: {
+    showLocale: false,
+  },
+});
+</script>
+<script type="text/javascript" src="/lib/MathJax/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+<ul class="task-constraints">
+<li><b>Time limit:</b> 1.00 s</li>
+<li><b>Memory limit:</b> 512 MB</li>
+</ul>
+<input type="hidden" name="course" value="problemset">
+<input type="hidden" name="task" value="1083">
+You are given all numbers between <span class="MathJax_Preview" style="color: inherit;"></span><span class="MathJax" id="MathJax-Element-1-Frame" tabindex="0" data-mathml="<math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot;><mn>1</mn><mo>,</mo><mn>2</mn><mo>,</mo><mo>&amp;#x2026;</mo><mo>,</mo><mi>n</mi></math>" role="presentation" style="position: relative;"><nobr aria-hidden="true"><span class="math" id="MathJax-Span-1" role="math" style="width: 4.882em; display: inline-block;"><span style="display: inline-block; position: relative; width: 4.279em; height: 0px; font-size: 114%;"><span style="position: absolute; clip: rect(1.319em, 1004.28em, 2.525em, -999.997em); top: -2.135em; left: 0.003em;"><span class="mrow" id="MathJax-Span-2"><span class="mn" id="MathJax-Span-3" style="font-family: MathJax_Main;">1</span><span class="mo" id="MathJax-Span-4" style="font-family: MathJax_Main;">,</span><span class="mn" id="MathJax-Span-5" style="font-family: MathJax_Main; padding-left: 0.167em;">2</span><span class="mo" id="MathJax-Span-6" style="font-family: MathJax_Main;">,</span><span class="mo" id="MathJax-Span-7" style="font-family: MathJax_Main; padding-left: 0.167em;">…</span><span class="mo" id="MathJax-Span-8" style="font-family: MathJax_Main; padding-left: 0.167em;">,</span><span class="mi" id="MathJax-Span-9" style="font-family: MathJax_Math-italic; padding-left: 0.167em;">n</span></span><span style="display: inline-block; width: 0px; height: 2.141em;"></span></span></span><span style="display: inline-block; overflow: hidden; vertical-align: -0.309em; border-left: 0px solid; width: 0px; height: 1.128em;"></span></span></nobr><span class="MJX_Assistive_MathML" role="presentation"><math xmlns="http://www.w3.org/1998/Math/MathML"></math></span></span><script type="math/tex" id="MathJax-Element-1">1,2,\ldots,n</script> except one. Your task is to find the missing number.<br>
+<br>
+<b id="input">Input</b><br>
+<br>
+The first input line contains an integer n<br>
+<br>
+The second line contains n-1 numbers. Each number is distinct and between 1 and n (inclusive).<br>
+<br>
+<b id="output">Output</b><br>
+<br>
+Print the missing number.<br>
+<br>
+<b id="constraints">Constraints</b><br>
+<ul>
+<li><span class="MathJax_Preview" style="color: inherit;"></span><span class="MathJax" id="MathJax-Element-6-Frame" tabindex="0" data-mathml="<math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot;><mn>2</mn><mo>&amp;#x2264;</mo><mi>n</mi><mo>&amp;#x2264;</mo><mn>2</mn><mo>&amp;#x22C5;</mo><msup><mn>10</mn><mn>5</mn></msup></math>" role="presentation" style="position: relative;"><nobr aria-hidden="true"><span class="math" id="MathJax-Span-24" role="math" style="width: 7.349em; display: inline-block;"><span style="display: inline-block; position: relative; width: 6.417em; height: 0px; font-size: 114%;"><span style="position: absolute; clip: rect(1.209em, 1006.42em, 2.579em, -999.997em); top: -2.245em; left: 0.003em;"><span class="mrow" id="MathJax-Span-25"><span class="mn" id="MathJax-Span-26" style="font-family: MathJax_Main;">2</span><span class="mo" id="MathJax-Span-27" style="font-family: MathJax_Main; padding-left: 0.277em;">≤</span><span class="mi" id="MathJax-Span-28" style="font-family: MathJax_Math-italic; padding-left: 0.277em;">n</span><span class="mo" id="MathJax-Span-29" style="font-family: MathJax_Main; padding-left: 0.277em;">≤</span><span class="mn" id="MathJax-Span-30" style="font-family: MathJax_Main; padding-left: 0.277em;">2</span><span class="mo" id="MathJax-Span-31" style="font-family: MathJax_Main; padding-left: 0.222em;">⋅</span><span class="msubsup" id="MathJax-Span-32" style="padding-left: 0.222em;"><span style="display: inline-block; position: relative; width: 1.428em; height: 0px;"><span style="position: absolute; clip: rect(3.183em, 1000.99em, 4.169em, -999.997em); top: -3.999em; left: 0.003em;"><span class="mn" id="MathJax-Span-33" style="font-family: MathJax_Main;">10</span><span style="display: inline-block; width: 0px; height: 4.005em;"></span></span><span style="position: absolute; top: -4.383em; left: 0.99em;"><span class="mn" id="MathJax-Span-34" style="font-size: 70.7%; font-family: MathJax_Main;">5</span><span style="display: inline-block; width: 0px; height: 4.005em;"></span></span></span></span></span><span style="display: inline-block; width: 0px; height: 2.251em;"></span></span></span><span style="display: inline-block; overflow: hidden; vertical-align: -0.247em; border-left: 0px solid; width: 0px; height: 1.253em;"></span></span></nobr><span class="MJX_Assistive_MathML" role="presentation"><math xmlns="http://www.w3.org/1998/Math/MathML"></msup></math></span></span><script type="math/tex" id="MathJax-Element-6">2 \le n \le 2 \cdot 10^5</script><br>
+</li></ul>
+<b id="example">Example</b><br>
+<br>
+Input:<br>
+<code>5<br>
+2 3 1 5</code><br>
+<br>
+Output:<br>
+<code>4</code></p>   </div>
+
+        <h2>Solution</h2>
+        <p>An intuitive way to solve this problem is by creating an array till n, comparing the arrays and finding out the missing number. However, this can be solved in an easier way by using the formula n = n(n+1) / 2 - which gives the sum of numbers till n. We can also track the sum of the n-1 numbers we are given. Subracting the total sum from the sum of the n-1 numbers, we can find the missing number.</p>
+<blockquote class="blockquote">
+          <p>Code to this problem</p>
+        </blockquote>
+<pre><code class="language-CSS">#include &lt;iostream&gt;
+using namespace std;
+
+int main(){
+  //long long is used to satisfy constraints
+  long long n;
+  long long sum = 0; //track sum of input numbers
+  cin >> n;
+  long long tsum = (n*(n+1)) / 2; //sum of numbers till n
+  //takes input of n-1 numbers, and simultaneously tracks their sum
+  for(int i=1;i<n;++i){
+    int x;
+    cin >> x;
+    sum += x;
+  }
+  long long ans = tsum - sum;
+  cout << ans;
+
+  return 0;
+}</code></pre>
+
+  
+
+      <div class="col-lg-6 mx-auto">
+        
+        <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
+</div>
+          
+          
+        </div>
+      </div>
+    </div>
+  </div>
+
+<footer class="py-3 my-4 bg-dark">
+    <ul class="nav justify-content-center border-bottom pb-3 mb-3">
+      <li class="nav-item"><a href=".." class="nav-link px-2 text-light">Home</a></li>
+      <li class="nav-item"><a href="#" class="nav-link px-2 text-light">FAQs</a></li>
+      <li class="nav-item"><a href="#" class="nav-link px-2 text-light">About</a></li>
+      <li class="nav-item"><a href="#" class="nav-link px-2 text-light">Github<img src="https://github.githubassets.com/favicons/favicon.png" alt="Girl in a jacket" width="30" height="30"></a></li>
+    </ul>
+    <p class="text-center text-light">© 2022 RadonU</p>
+  </footer>
+
+  <script src="https://getbootstrap.com/docs/5.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+  
+</body>
+</html>
